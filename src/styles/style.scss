@@ -41,7 +41,7 @@ nav{
        flex-grow: 3
     }
 
-    .knapper {
+    a {
         background:var(--Dblue);
         color: var(--white);
         font-size: 1.5rem;
@@ -53,7 +53,7 @@ nav{
 }
 main {
     background-color: var(--white);
-    margin: 0rem 10rem 10rem 10rem;
+    margin: 1.4rem 2rem 9rem 0rem;
     padding: 7rem;
 
     h1{

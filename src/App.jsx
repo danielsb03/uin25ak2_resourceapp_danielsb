@@ -2,21 +2,19 @@ import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Resources from './components/Resources'
-import NavItem from './components/NavItem'
-import Nav from './components/Nav'
 import Layout from './components/Layout'
 import "./styles/style.scss"
 function App() {
 const [innhold, setInnhold] = useState ()
 
   return (
-    <Layout resources={resources} catagory={catagory}>
+    <Layout>
       <Routes>
-        <Route path="/" element={<Resources  />} />
-        <Route path="/css" element={<Resources />} />
-        <Route path="/javascript" element={<Resources />} />
-        <Route path="/react" element={<Resources />} />
-        <Route path="/sanity" element={<Resources/>} />
+        <Route path="/html" element={<Resources  catagory={"html"} />} />
+        <Route path="/css" element={<Resources catagory={"css"} />} />
+        <Route path="/javascript" element={<Resources catagory={"javascript"}/>} />
+        <Route path="/react" element={<Resources catagory={"react"}/>} />
+        <Route path="/sanity" element={<Resources catagory={"sanity"}/>} />
       </Routes>
   
 
