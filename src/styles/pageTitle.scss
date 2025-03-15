@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+--Dblue: #2A324B;
+--Lblue: #58699D;
+--gray: #E1E5EE;
+--white: #fff;
+}
+main {
+    background-color: var(--white);
+    margin: 0rem 10rem 10rem 10rem;
+    padding: 7rem;
+    color: black;
+    h1{
+        margin-block: 0.67em;
+        font-size: 2rem;
+    }
+    p{
+       
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+}

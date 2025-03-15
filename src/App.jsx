@@ -4,19 +4,24 @@ import { Route, Routes } from 'react-router-dom'
 import Resources from './components/Resources'
 import Layout from './components/Layout'
 import "./styles/style.scss"
+import { resources } from "./assets/ressurser";
+import Nav from './components/Nav'
 function App() {
 const [innhold, setInnhold] = useState ()
 
   return (
-    <Layout>
+    <Layout element={<Resources />}>
       <Routes>
-        <Route path="/html" element={<Resources  catagory={"html"} />} />
+        {/* <Route path="/" element={<Resources  catagory={"html"} />} />
         <Route path="/css" element={<Resources catagory={"css"} />} />
         <Route path="/javascript" element={<Resources catagory={"javascript"}/>} />
         <Route path="/react" element={<Resources catagory={"react"}/>} />
-        <Route path="/sanity" element={<Resources catagory={"sanity"}/>} />
+        <Route path="/sanity" element={<Resources catagory={"sanity"}/>} /> */}
+        
+        
+        <Route path="/category/:slug" element={<Resources resources={resources} />} />
       </Routes>
-  
+        
 
       
   </Layout>
