@@ -16,10 +16,10 @@ const [innhold, setInnhold] = useState ()
         <Route path="/css" element={<Resources catagory={"css"} />} />
         <Route path="/javascript" element={<Resources catagory={"javascript"}/>} />
         <Route path="/react" element={<Resources catagory={"react"}/>} />
-        <Route path="/sanity" element={<Resources catagory={"sanity"}/>} /> */}
+      */}
         
-        
-        <Route path="/category/:slug" element={<Resources resources={resources} />} />
+       
+        <Route path="/category/:slug" element={<Resources resources={resources}  />} />
       </Routes>
         
 

@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 
 
 
-export default function Resources ({resources}){
+export default function Resources ({resources, resource}){
     const {slug} = useParams()
 
     
     console.log("Dette er params", useParams)
     //Filtrerer products-arrayen basert på slug:
      const categoryProducts = resources.filter((resource) => resource.category === slug)
+     console.log("resources", resources.category)
     console.log("Hei", categoryProducts)
     
     return (
@@ -20,9 +21,9 @@ export default function Resources ({resources}){
     <div id="productlist">
             {/* Mapper gjennom den filtrerte produktlisten og genererer et ProductCard-komponent for hvert produkt */}
             {categoryProducts.map((resource, index) => (
-                <PageTitle
-                product={resource}
-                key={`FCT_${index}`}
+                <PageTitle 
+                resource={resource}
+                key={index}
                 
                 />
             ))}
