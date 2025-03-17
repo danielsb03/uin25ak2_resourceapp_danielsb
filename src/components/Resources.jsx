@@ -10,7 +10,7 @@ export default function Resources ({resources, resource}){
     
     console.log("Dette er params", useParams)
     //Filtrerer products-arrayen basert på slug:
-     const categoryProducts = resources.filter((resource) => resource.category === slug)
+     const categoryProducts = resources.filter((resource, ) => resource.category === slug)
      console.log("resources", resources.category)
     console.log("Hei", categoryProducts)
     
@@ -19,14 +19,26 @@ export default function Resources ({resources, resource}){
         <main>
      
     <div id="productlist">
-            {/* Mapper gjennom den filtrerte produktlisten og genererer et ProductCard-komponent for hvert produkt */}
+           
+            <article className="info"> 
+         {/*Fikk hjelp av Ingrid*/}
+               <h1>{categoryProducts[0].category}</h1>
+                
+
+            <ul>
             {categoryProducts.map((resource, index) => (
                 <PageTitle 
-                resource={resource}
+               
                 key={index}
+                resource={resource}
                 
                 />
-            ))}
+                
+))}</ul>
+
+                
+            
+            </article>
             </div>
        
     </main>
